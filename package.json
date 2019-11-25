@@ -1,0 +1,19 @@
+{
+  "name": "red-contrib-eksido-monoloop",
+  "version": "0.1.25",
+  "description": "This a Node-RED node for Monoloop - Onsite personalisation for MadTech Enterprise Solutions. Proudly developed and powered by Eksido ( https://eksido.com )",
+  "main": "node.js",
+  "scripts": {
+    "test": "mocha \"test/**/*_spec.js\""
+  },
+  "node-red": {
+    "nodes": {
+      "eksido-monoloop": "node.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eksido/node-red-contrib-eksido-monoloop.git"
+  },
+  "license": "Apache-2.0"
+}

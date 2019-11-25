@@ -1,0 +1,52 @@
+<script type="text/javascript">
+    RED.nodes.registerType('eksido-monoloop',{
+        category: 'Input',
+        color: '#4e9b01',
+        defaults: {
+            name: {value:""},
+            accountid: {value:""},
+            apikey: {value:""},
+            username: {value:""},
+            password: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "envelope.png",
+        align: "right",
+        label: function() { return this.name||"eksido-monoloop"; }, 
+        credentials: {
+            accountid: {type:"text"},
+            apikey: {type:"password"},
+            username: {type:"text"},
+            password: {type:"password"}
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="eksido-monoloop">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> name </label>
+        <input type="text" id="node-input-name" placeholder="name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-accountid"><i class="icon-tag"></i> accountid</label>
+        <input type="text" id="node-input-accountid">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apikey"><i class="icon-tag"></i> apikey</label>
+        <input type="password" id="node-input-apikey">
+    </div>
+    <div class="form-row">
+        <label for="node-input-username"><i class="icon-tag"></i> Username</label>
+        <input type="text" id="node-input-username">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="icon-tag"></i> Password</label>
+        <input type="password" id="node-input-password">
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="eksido-monoloop">
+  Help text eksido-monoloop eksido-monoloop
+</script>
