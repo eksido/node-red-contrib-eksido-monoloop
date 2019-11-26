@@ -1,4 +1,4 @@
-// node.js
+// monoloop.js
 
 module.exports = function(RED) {
 
@@ -21,7 +21,7 @@ module.exports = function(RED) {
 
   }
 
-  RED.nodes.registerType("eksido-monoloop", MonoloopNode, {
+  RED.nodes.registerType("monoloop", MonoloopNode, {
     credentials: {
       apikey: {type:"password"},
       password: {type:"password"}
