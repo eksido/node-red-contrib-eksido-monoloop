@@ -1,8 +1,8 @@
 {
   "name": "red-contrib-eksido-monoloop",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "This a Node-RED node for Monoloop",
-  "main": "node.js",
+  "main": "monoloop.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
