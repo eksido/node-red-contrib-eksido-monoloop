@@ -1,10 +1,10 @@
 {
-  "name": "node-red-contrib-eksido-monoloop",
-  "version": "0.1.25",
-  "description": "This a Node-RED node for Monoloop - Onsite personalisation for MadTech Enterprise Solutions. Proudly developed and powered by Eksido ( https://eksido.com )",
+  "name": "red-contrib-eksido-monoloop",
+  "version": "0.1.1",
+  "description": "This a Node-RED node for Monoloop",
   "main": "node.js",
   "scripts": {
-    "test": "mocha \"test/**/*_spec.js\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "node-red": {
     "nodes": {
@@ -13,7 +13,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eksido/node-red-contrib-eksido-monoloop.git"
+    "url": "git+https://github.com/eksido/node-red-contrib-eksido-monoloop.git"
   },
-  "license": "Apache-2.0"
+  "keywords": [
+    "monoloop",
+    "madtech",
+    "enterprise",
+    "connected",
+    "integration"
+  ],
+  "author": "Franz Malten Buemann <fmb@eksido.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/eksido/node-red-contrib-eksido-monoloop/issues"
+  },
+  "homepage": "https://github.com/eksido/node-red-contrib-eksido-monoloop#readme"
 }

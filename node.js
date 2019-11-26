@@ -1,20 +1,31 @@
+// node.js
+
 module.exports = function(RED) {
 
-    function EksidoMonoloopNode(config) {
-    RED.nodes.createNode(this,config);
-        var node = this;
-        node.on('input', function(msg) {
-            msg.payload = msg.payload.toLowerCase();
-            node.send(msg);
-        });
-    }
+  function MonoloopNode(config) {
 
-    RED.nodes.registerType("eksido-monoloop",EksidoMonoloopNode,{
-        credentials: {
-            accountid: {type:"text"},
-            apikey: {type:"password"},
-            username: {type:"text"},
-            password: {type:"password"}
-        }
-    });
+    RED.nodes.createNode(this,config);
+    var node = this;
+    this.accountid = config.accountid;
+    this.apikey = config.apikey;
+    this.username = config.username;
+    this.password = config.password;
+
+    node.on('input', function(msg) {
+      this.status({fill:"green",shape:"dot",text:"sending"});
+      /*
+        Do the action
+      */
+      this.status({});
+    } 
+
+  }
+
+  RED.nodes.registerType("eksido-monoloop", MonoloopNode, {
+    credentials: {
+      apikey: {type:"password"},
+      password: {type:"password"}
+    }
+  });
+
 }
