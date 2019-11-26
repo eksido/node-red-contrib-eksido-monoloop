@@ -8,7 +8,7 @@
   },
   "node-red": {
     "nodes": {
-      "monoloop": "node.js"
+      "monoloop": "monoloop.js"
     }
   },
   "repository": {
