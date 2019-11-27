@@ -1,6 +1,6 @@
 {
-  "name": "red-contrib-eksido-monoloop",
-  "version": "0.3.0",
+  "name": "node-red-contrib-eksido-monoloop",
+  "version": "1.0.0",
   "description": "This a Node-RED node for Monoloop",
   "main": "monoloop.js",
   "scripts": {
