@@ -1,5 +1,5 @@
 {
-  "name": "node-red-contrib-eksido-monoloop",
+  "name": "@eksido/node-red-contrib-eksido-monoloop",
   "version": "1.0.0",
   "description": "This a Node-RED node for Monoloop",
   "main": "monoloop.js",
@@ -23,7 +23,7 @@
     "integration"
   ],
   "author": "Franz Malten Buemann <fmb@eksido.com>",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/eksido/node-red-contrib-eksido-monoloop/issues"
   },
