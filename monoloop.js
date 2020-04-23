@@ -6,10 +6,9 @@ module.exports = function(RED) {
 
     RED.nodes.createNode(this,config);
     var node = this;
+    
     this.accountid = config.accountid;
     this.apikey = config.apikey;
-    this.username = config.username;
-    this.password = config.password;
 
     node.on('input', function(msg) {
       this.status({fill:"green",shape:"dot",text:"sending"});
@@ -17,15 +16,13 @@ module.exports = function(RED) {
         Do the action
       */
       this.status({});
-    } 
-
+    })
   }
-
+  
   RED.nodes.registerType("monoloop", MonoloopNode, {
     credentials: {
-      apikey: {type:"password"},
-      password: {type:"password"}
+      accountid: {type:"text"},
+      apikey: {type:"password"}
     }
-  });
-
+  })
 }

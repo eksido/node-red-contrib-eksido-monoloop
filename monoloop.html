@@ -3,20 +3,15 @@
         category: 'config',
         color: '#ffffff',
         defaults: {
-            name: {value:""},
             accountid: {value:""},
-            apikey: {value:""},
-            username: {value:""},
-            password: {value:""}
+            apikey: {value:""}
         },
         label: function() { 
-            return this.name||"monoloop"; 
+            return this.name||"Monoloop Node"; 
         }, 
         credentials: {
             accountid: {type:"text"},
-            apikey: {type:"password"},
-            username: {type:"text"},
-            password: {type:"password"}
+            apikey: {type:"password"}
         }
     });
 </script>
@@ -34,15 +29,6 @@
         <label for="node-config-input-apikey"><i class="icon-tag"></i> apikey</label>
         <input type="password" id="node-config-input-apikey">
     </div>
-    <div class="form-row">
-        <label for="node-config-input-username"><i class="icon-tag"></i> Username</label>
-        <input type="text" id="node-config-input-username">
-    </div>
-    <div class="form-row">
-        <label for="node-config-input-password"><i class="icon-tag"></i> Password</label>
-        <input type="password" id="node-config-input-password">
-    </div>
-
 </script>
 
 <script type="text/x-red" data-help-name="monoloop">
