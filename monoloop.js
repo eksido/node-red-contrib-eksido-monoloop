@@ -1,26 +1,13 @@
 // monoloop.js
-
 module.exports = function(RED) {
 
-  function MonoloopNode(config) {
-    RED.nodes.createNode(this,config);
-    var node = this;
-    this.accountid = config.accountid;
-    this.apikey = config.apikey;
-
-    node.on('input', function(msg) {
-      this.status({fill:"green",shape:"dot",text:"sending"});
-      /*
-        Do the action
-      */
-      this.status({});
-    })
+  function MonoloopConfigNode(n) {
+    RED.nodes.createNode(this, n);
+    this.name = n.name
+    this.accountid = config.accountid
+    this.apikey = config.apikey
   }
-  
-  RED.nodes.registerType("monoloop", MonoloopNode, {
-    credentials: {
-      accountid: {type:"text"},
-      apikey: {type:"password"}
-    }
-  })
+
+  RED.nodes.registerType("monoloop-config", MonoloopConfigNode)
+
 }
