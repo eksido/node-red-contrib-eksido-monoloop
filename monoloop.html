@@ -1,38 +1,33 @@
 <script type="text/javascript">
     RED.nodes.registerType('monoloop-config',{
-        category: 'web',
+        category: 'config',
         color: '#ffffff',
         defaults: {
-            accountid: {value:""},
-            apikey: {value:""}
+            name: {value:"",required:true},
+            accountid: {value:"",required:true},
+            apikey: {value:"",required:true}
         },
         label: function() { 
             return this.name || "Monoloop Config"; 
-        }, 
-        credentials: {
-            accountid: {type:"text"},
-            apikey: {type:"password"}
-        },
-        inputs:0,
-        outputs:0,
-        align: "center"
+        }
     });
 </script>
 
 <script type="text/x-red" data-template-name="monoloop-config">
     <div class="form-row">
-        <label for="node-config-input-name"><i class="icon-tag"></i>name</label>
-        <input type="text" id="node-config-input-name" placeholder="name">
+        <label for="node-config-input-name"><i class="icon-bookmark"></i> Name</label>
+        <input type="text" id="node-config-input-name">
     </div>
     <div class="form-row">
-        <label for="node-config-input-accountid"><i class="icon-tag"></i>accountid</label>
+        <label for="node-config-input-accountid"><i class="icon-bookmark"></i>Monoloop Account Id</label>
         <input type="text" id="node-config-input-accountid">
     </div>
     <div class="form-row">
-        <label for="node-config-input-apikey"><i class="icon-tag"></i>apikey</label>
+        <label for="node-config-input-apikey"><i class="icon-bookmark"></i>Monoloop API Key</label>
         <input type="password" id="node-config-input-apikey">
     </div>
 </script>
+
 
 <script type="text/x-red" data-help-name="monoloop">
   For support go to our <a href="https://eksido.atlassian.net/servicedesk/customer/portals"> Customer Success Portal </a>
