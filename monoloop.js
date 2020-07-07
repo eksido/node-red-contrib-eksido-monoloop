@@ -3,10 +3,8 @@
 module.exports = function(RED) {
 
   function MonoloopNode(config) {
-
     RED.nodes.createNode(this,config);
     var node = this;
-    
     this.accountid = config.accountid;
     this.apikey = config.apikey;
 

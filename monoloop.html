@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('monoloop',{
+    RED.nodes.registerType('monoloop-config',{
         category: 'web',
         color: '#ffffff',
         defaults: {
@@ -12,13 +12,17 @@
         credentials: {
             accountid: {type:"text"},
             apikey: {type:"password"}
-        }
+        },
+        inputs:1,
+        outputs:0,
+        icon: "envelope.png",
+        align: "right"
     });
 </script>
 
 <script type="text/x-red" data-template-name="monoloop">
     <div class="form-row">
-        <label for="node-config-input-name"><i class="icon-tag"></i> name </label>
+        <label for="node-config-input-name"><i class="icon-tag"></i>name</label>
         <input type="text" id="node-input-name" placeholder="name">
     </div>
     <div class="form-row">
