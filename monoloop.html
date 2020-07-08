@@ -15,7 +15,7 @@
 
 <script type="text/x-red" data-template-name="monoloop-config">
     <div class="form-row">
-        <label for="node-config-input-name"><i class="icon-bookmark"></i> Name</label>
+        <label for="node-config-input-name"><i class="icon-bookmark"></i>Name</label>
         <input type="text" id="node-config-input-name">
     </div>
     <div class="form-row">
@@ -28,31 +28,53 @@
     </div>
 </script>
 
-
-script type="text/javascript">
+<script type="text/javascript">
     RED.nodes.registerType('monoloop-profile',{
-        category: 'web',
+        category: 'Web',
         color: '#ffffff',
         defaults: {
-            name: {value:"",required:true},
-            accountid: {value:"",required:true},
-            apikey: {value:"",required:true}
+            name: {
+                value:"",
+                required:true
+            },
+            configuration: {
+                value:"", 
+                type:"monoloop-config",
+                required:true
+            },
+            action: {
+                value:"", 
+                type:"text",
+                required:true      
+            }
         },
         label: function() { 
             return this.name || "Monoloop Profile"; 
-        }
+        },
+        inputs: 1,
+        outputs: 1
     });
 </script>
 
-
 <script type="text/x-red" data-template-name="monoloop-profile">
     <div class="form-row">
-        <label for="node-input-name"><i class="icon-bookmark"></i> Name</label>
+        <label for="node-input-configuration"><i class="fa fa-globe"></i> Configuration</label>
+        <input type="text" id="node-input-configuration">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-bookmark"></i>Name</label>
         <input type="text" id="node-input-name">
     </div>
+    <div class="form-row">
+        <label for="node-input-action"><i class="icon-bookmark"></i>Action</label>
+        <select id="node-input-action">
+            <option value="create">Create profile</option>
+            <option value="find">Find profile</option>
+            <option value="update">Update profile</option>
+            <option value="delete">Delete profile</option>
+        </select>
+    </div>
 </script>
-
-
 
 <script type="text/x-red" data-help-name="monoloop">
   For support go to our <a href="https://eksido.atlassian.net/servicedesk/customer/portals"> Customer Success Portal </a>
