@@ -52,7 +52,22 @@
             return this.name || "Monoloop Profile"; 
         },
         inputs: 1,
-        outputs: 1
+        outputs: 1,
+        oneditprepare: function() {
+            console.log(this);
+            console.log(this);
+
+            $("#node-input-action").change(function() {
+                let action = $('#node-input-action').val();
+                let configuration = RED.nodes.node(this.configuration)
+
+                console.log( "Action changed: " + action )
+                console.log( "Configuration: " + configuration )
+                if(action === "updateprofile"){
+                    console.log("Credentials " + configuration  )
+                }
+            })
+        }
     });
 </script>
 
@@ -68,10 +83,10 @@
     <div class="form-row">
         <label for="node-input-action"><i class="icon-bookmark"></i>Action</label>
         <select id="node-input-action">
-            <option value="create">Create profile</option>
-            <option value="find">Find profile</option>
-            <option value="update">Update profile</option>
-            <option value="delete">Delete profile</option>
+            <option value="getprofile">Find Profile</option>
+            <option value="getprofiles">Find Latests Profiles</option>
+            <option value="updateprofile">Update a single profile</option>
+            <option value="delete">Delete a single profile</option>
         </select>
     </div>
 </script>
