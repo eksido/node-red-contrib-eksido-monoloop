@@ -18,10 +18,11 @@ module.exports = function(RED) {
     this.credentials = RED.nodes.getNode(n.configuration)
     this.name = n.name;
     this.action = n.action;
-
+    this.accountid = n.accountid
+    this.apikey = n.apikey
     // Retrieve the config node
-    this.accountid = this.credentials.accountid;
-    this.apikey = this.credentials.apikey;
+    //this.accountid = this.credentials.accountid;
+    //this.apikey = this.credentials.apikey;
 
     // Check configuration exists 
     if (this.accountid && this.apikey) {
@@ -66,4 +67,14 @@ module.exports = function(RED) {
     }
   }
   RED.nodes.registerType("monoloop-profile", MonoloopProfile);
+
+
+  // Endpoint for getting external-objects
+
+  RED.httpAdmin.get("/nodes", RED.auth.needsPermission('monoloop.read'), function(req,res) {
+
+    node.log("Reading external objects")
+
+  });
+
 } // End export

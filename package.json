@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-eksido-monoloop",
-  "version": "1.0.45",
+  "version": "1.0.50",
   "description": "This a Node-RED node for Monoloop",
   "main": "monoloop.js",
   "scripts": {
@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/eksido/node-red-contrib-eksido-monoloop/issues"
   },
-  "homepage": "https://github.com/eksido/node-red-contrib-eksido-monoloop#readme"
+  "homepage": "https://github.com/eksido/node-red-contrib-eksido-monoloop#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
 }

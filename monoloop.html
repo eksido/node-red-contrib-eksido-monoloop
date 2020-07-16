@@ -41,6 +41,14 @@
                 value:"", 
                 type:"monoloop-config",
                 required:true
+            },            
+            accountid: {
+                value:"",
+                required:true
+            },
+            apikey: {
+                value:"",
+                required:true
             },
             action: {
                 value:"", 
@@ -59,13 +67,19 @@
 
             $("#node-input-action").change(function() {
                 let action = $('#node-input-action').val();
-                let configuration = RED.nodes.node(this.configuration)
+                let accountid = $('#node-input-accountid').val();
+                let apikey = $('#node-input-apikey').val();
 
                 console.log( "Action changed: " + action )
-                console.log( "Configuration: " + configuration )
                 if(action === "updateprofile"){
-                    console.log("Credentials " + configuration  )
+                    console.log("Credentials " + accountid + '  ' + apikey  )
                 }
+
+                $.getJSON('nodes',function(data) {
+                    //... does stuff with data
+                });
+
+
             })
         }
     });
@@ -75,6 +89,14 @@
     <div class="form-row">
         <label for="node-input-configuration"><i class="fa fa-globe"></i> Configuration</label>
         <input type="text" id="node-input-configuration">
+    </div>
+    <div class="form-row">
+        <label for="node-input-accountid"><i class="icon-bookmark"></i>accountid</label>
+        <input type="text" id="node-input-accountid">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apikey"><i class="icon-bookmark"></i>apikey</label>
+        <input type="text" id="node-input-apikey">
     </div>
     <div class="form-row">
         <label for="node-input-name"><i class="icon-bookmark"></i>Name</label>
